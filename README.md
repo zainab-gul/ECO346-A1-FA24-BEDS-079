@@ -3,14 +3,32 @@
 **Name / Reg. no.:** FA24-BEDS-079 (roll no. 79) &nbsp; **Section:** A
 **Variant:** 79 = 9 x 8 + 7, so variant **7: Balochistan (prov_code 4), urban (urban_rural 2)**.
 
+## Repository layout
+
+```
+.
+├── data/        pslm_person_subset.csv, pslm_hh_subset.csv   (input data)
+├── scripts/     00_helpers.R, 01_default.R, 02_distribution.R,
+│                03_relationship.R, 04_second_language.py
+├── figures/     default.svg, distribution.svg, relationship.svg, relationship_python.svg
+├── tables/      band_table_R.csv   (written by 03, read by 04)
+├── FA24-BEDS-079.pptx             (presentation)
+├── run_all.sh
+└── requirements.txt
+```
+
 ## How to reproduce
-Run from the repository root, in this order (no internet needed; R packages: readr, dplyr, ggplot2, scales, svglite; Python: pandas, numpy, matplotlib):
+
+Run from the repository root, in this order (no internet needed; R packages: readr, dplyr, ggplot2, scales, svglite; Python: pandas, numpy, matplotlib; see `requirements.txt`):
+
 ```
 Rscript scripts/01_default.R
 Rscript scripts/02_distribution.R
 Rscript scripts/03_relationship.R
-python scripts/04_second_language.py
+python scripts/04_second_language.py     # must run AFTER 03: it compares against tables/band_table_R.csv
 ```
+
+or simply `bash run_all.sh`. The scripts create `figures/` and `tables/` if they are missing.
 
 ## Figures
 ![Default](figures/default.svg)
