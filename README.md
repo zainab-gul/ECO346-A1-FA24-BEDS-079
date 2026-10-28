@@ -1,6 +1,6 @@
 # ECO346 Assignment 1: earnings in urban Balochistan (PSLM 2019-20)
 
-**Name / Reg. no.:** FA24-BEDS-079 (roll no. 79) &nbsp; **Section:** A
+**Name / Reg. no.:** Zainab Gul FA24-BED-079 &nbsp; **Section:** A
 **Variant:** 79 = 9 x 8 + 7, so variant **7: Balochistan (prov_code 4), urban (urban_rural 2)**.
 
 ## Repository layout
